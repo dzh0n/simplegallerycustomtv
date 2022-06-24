@@ -42,15 +42,29 @@
 </div>
 
 
+<style>
+    #SimpleGallery {
+        background: transparent;
+    }
+    .js-fileapi-wrapper {
+        border: 1px solid #d4d4d4;
+        padding: .5em;
+    }
+    .js-fileapi-wrapper .btn-left, .js-fileapi-wrapper .btn-right {
+        display: inline-block;
+    }
+    .js-fileapi-wrapper table {
+        width: auto !important;
+    }
+</style>
+
 <script>
-    $(window).on('load', function(){
-        if (!sgConfig.sgLoaded) {
-            sgHelper.init();
-            sgConfig.sgLoaded = true;
+    $j(window).on('load', function(){
+    if (!sgConfig.sgLoaded) {
+        sgHelper.init();
+        sgConfig.sgLoaded = true;
+         $j('#sg_pages').pagination('select');
+    }
 
-
-            $('#sg_pages').pagination('select');
-        }
-
-    });
+     });
 </script>
